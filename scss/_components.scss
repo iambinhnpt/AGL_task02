@@ -1,0 +1,14 @@
+.btn-white{
+    @include styleButton($white-color, $dark-red-color, $pd-0, $pd-4*2, 0);
+    @include styleText($dark-red-color,$fs-2, bold);
+    &:hover{
+        @include hoverButton($dark-red-color,$white-color,$white-color);
+    }
+}
+.btn-red{
+    @include styleButton($dark-red-color,$white-color,$pd-0, $pd-4*2,0);
+    @include styleText($white-color,$fs-2, bold);
+    &:hover{
+        @include hoverButton($white-color,$dark-red-color,$dark-red-color);
+    }
+}

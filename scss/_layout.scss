@@ -1,0 +1,296 @@
+// Begin header
+.c-header {
+    width: auto;
+    height: 100vh;
+
+    position: relative;
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__logo {
+        margin-bottom: $mg-1;
+    }
+    &__slogan1 {
+        margin: $mg-2 auto;
+        @include styleText($white-color, $fs-1, bold);
+    }
+    &__slogan2 {
+        margin: $mg-2 auto;
+        font-family: $font-en;
+        @include styleText($white-color, $fs-0, 400);
+    }
+}
+
+.c-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__mainnav {
+        a {
+            text-decoration: none;
+            margin-right: $mg-3;
+            font-family: $font-en;
+            @include styleText($white-color, $fs-0, bold);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__social {
+        span {
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+.c-slider {
+    margin: $mg-1;
+    position: relative;
+    &__item {
+        display: none;
+        img {
+            width: 100%;
+        }
+    }
+}
+//End header
+
+//Begin content 1
+.l-content1 {
+    margin-top: $mg-1;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $orange-color;
+    &__left,
+    &__right {
+        width: 50vw;
+        height: 424px;
+        position: relative;
+        &__text {
+            width: 520px;
+            height: 245px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &__en {
+            font-family: $font-en;
+            @include styleText($dark-red-color, $fs-0, bold);
+            padding: $pd-4 0 $pd-1 2 * $pd-4;
+        }
+        &__jp {
+            font-family: $font-jp-1;
+            @include styleText($dark-red-color, $fs-1, bold);
+            padding-left: 2 * $pd-4;
+            padding-bottom: $pd-1;
+        }
+        &__btn {
+            margin: 0 0 $pd-4 2 * $pd-4;
+        }
+        &__label {
+            position: absolute;
+            top: -5%;
+            right: 10%;
+        }
+    }
+    &__left {
+        background-image: url(../img/bg_cake_left.jpg);
+    }
+    &__right {
+        background-image: url(../img/bg_cake_right.jpg);
+    }
+}
+
+//End content 1
+
+//Begin content 2
+.l-content2 {
+    .l-content2__container {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 9rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__vertical {
+        margin-right: $mg-0;
+        &__rotate {
+            transform: rotate(90deg) translate(4rem, -3rem);
+            font-family: $fs-0;
+            @include styleText($dark-red-color, $fs-0, normal);
+            text-transform: uppercase;
+        }
+        &__text {
+            width: 3.5rem;
+            @include styleText($dark-red-color, $fs-1, normal);
+            line-height: 1.25;
+        }
+    }
+    &__text {
+        padding: $pd-1 0 $pd-1 $pd-3;
+        p {
+            @include styleText($black-color, $fs-0, normal);
+            font-family: $font-jp-2;
+            line-height: 2.5;
+        }
+    }
+    &__btn {
+        margin-top: $mg-1;
+    }
+}
+//End content 2
+
+//Begin content 3
+.l-content3 {
+    background-color: $orange-color;
+
+    &__container {
+        padding: 9rem 0;
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: $mg-2;
+        h3 {
+            @include styleText($dark-red-color, $fs-1, bold);
+            font-family: $font-jp-1;
+        }
+        span {
+            @include styleText($dark-red-color, $fs-0, bold);
+            font-family: $font-en;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col {
+        h4 {
+            @include styleText($dark-red-color, $fs-0, normal);
+            font-family: $font-jp-2;
+            text-align: center;
+            text-decoration: underline;
+            line-height: 3rem;
+        }
+        &:nth-child(2){
+            margin: 0 5rem 5rem 5rem;
+        }
+    }
+    &__item {
+        background-color: white;
+        width: 300px;
+        height: 80px;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: left;
+        position: relative;
+        &__text {
+            padding: 1.5rem 0 0 1.5rem;
+            p {
+                @include styleText($black-color, $fs-3, 500);
+                font-family: $font-jp-2;
+                letter-spacing: 0.02px;
+                &:first-child {
+                    color: $dark-red-color;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+        &::after{
+            content: '' ;          
+            background: url(../img/over_box.png) rgba(255, 255, 255, 0.7) no-repeat center center;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            text-align: center;
+            vertical-align: bottom;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:hover{
+            &::after{
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+   &__btn {
+       width: 300px;
+       margin: 0 auto;
+       text-align: center;
+       .btn-red{
+           width: 100%;
+       }
+       
+   }
+   
+}
+//End content 3
+
+//Begin footer
+.c-footer{
+    background: url(../img/footer_background.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    &__container{
+        width: 1000px;
+        margin: 0 auto;
+        padding: 4rem 0;   
+    }
+    &__logo{
+        margin-top: 3rem;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &__line{
+        width: 23rem;
+        height: 1px;
+        background-color: $white-color;
+        margin: 3rem auto;
+    }
+    &__text{
+        padding: $pd-0 0;
+        @include styleText($white-color, $fs-2, 500);
+        font-family: $font-jp-2;
+        p:not(:nth-child(3)){
+            margin-bottom: $mg-1;
+        }
+
+    }
+    &__social{
+        span{
+            &:hover{
+                opacity: 0.7;
+            }
+            &:nth-child(2){
+                padding: 0 1.5rem;
+               
+            }
+        }
+    }
+    &__copyright{
+        margin: 3rem auto 5rem;
+        span{
+            @include styleText($white-color, $fs-4, 500);
+            font-family: $font-jp-2;
+            letter-spacing: 0.1em;
+            
+        }
+
+    }
+
+}
+//End footer
